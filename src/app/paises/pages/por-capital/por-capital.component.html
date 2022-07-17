@@ -17,7 +17,11 @@
                  class="list-group-item list-group-item-action">
                <a class="nav-link"
                 [routerLink] = "['/pais',pais.cca2]">
-                {{pais.name.common}}
+                <img src="{{pais.flags.png}}" 
+                alt="Bandera"
+                class="small-flag"
+           >
+           {{pais.name.common}}
                </a>
             </li>  
             <li (click)="buscarSugeridos(keyword)"

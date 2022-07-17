@@ -15,9 +15,13 @@
                 class="list-group list-group-flush">
                 <li  *ngFor="let pais of paisesSugeridos;"
                      class="list-group-item list-group-item-action">
-                   <a class="nav-link"
-                    [routerLink] = "['/pais',pais.cca2]">
-                    {{pais.name.common}}
+                   <a   class="nav-link"
+                        [routerLink] = "['/pais',pais.cca2]">
+                        <img src="{{pais.flags.png}}" 
+                             alt="Bandera"
+                             class="small-flag"
+                        >
+                        {{pais.name.common}}
                    </a>
                 </li>  
                 <li (click)="buscarSugeridos(keyword)"
